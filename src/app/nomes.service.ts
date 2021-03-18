@@ -9,6 +9,7 @@ export class NomesService {
 
   private nomesEvento$ = new Subject<boolean>()
 
+  //Declaração vrs:
   private listaDeNomes: Nome[] = [
     { nome: "Ronaldo", tipo: "M"},
     { nome: "Batata", tipo: "F"},

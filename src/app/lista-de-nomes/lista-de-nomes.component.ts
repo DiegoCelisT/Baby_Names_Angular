@@ -7,7 +7,8 @@ import { NomesService } from '../nomes.service';
   templateUrl: './lista-de-nomes.component.html',
   styleUrls: ['./lista-de-nomes.component.css']
 })
-export class ListaDeNomesComponent implements OnInit, OnDestroy {
+
+export class ListaDeNomesComponent implements OnInit, OnDestroy { //Declarar o onDestroy que vai tirar aquele cod.
 
   @Input('tipo') tipoExtenso: "menino" | "menina" | "" = ""
   nomes: Nome[] = []
@@ -30,6 +31,8 @@ export class ListaDeNomesComponent implements OnInit, OnDestroy {
     .subscribe(listaDeNomes => this.nomes = listaDeNomes)
   }
 
+
+  
   ngOnDestroy() {
     this.sub.unsubscribe()
   }
